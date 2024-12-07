@@ -44,12 +44,12 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
-  ingress:
-    image: nginx:1
-    volumes:
-      - ./docker/nginx.conf:/etc/nginx/templates/default.conf.template
-    ports:
-      - 80:80
+  # ingress:
+  #   image: nginx:1
+  #   volumes:
+  #     - ./docker/nginx.conf:/etc/nginx/templates/default.conf.template
+  #   ports:
+  #     - 80:80
 
 volumes:
   postgres-data:
