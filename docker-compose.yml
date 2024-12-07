@@ -13,7 +13,7 @@ services:
       FILESYSTEM_DISK: local
       LOCAL_FILESYSTEM_VISIBILITY: public
     env_file:
-      - ./api/.env
+      - .env
     volumes:
       - opnform_storage:/usr/share/nginx/html/storage:rw
     depends_on:
@@ -36,7 +36,7 @@ services:
       LOCAL_FILESYSTEM_VISIBILITY: public
       IS_API_WORKER: "true"
     env_file:
-      - ./api/.env
+      - .env
     volumes:
       - opnform_storage:/usr/share/nginx/html/storage:rw
     depends_on:
