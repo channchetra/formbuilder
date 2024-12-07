@@ -47,8 +47,13 @@ services:
 
   ui:
     image: jhumanj/opnform-client:latest
-    env_file:
-      - ./client/.env
+    environment:
+      NUXT_PUBLIC_APP_URL:/
+      NUXT_PUBLIC_API_BASE:/api
+      NUXT_PRIVATE_API_BASE:http://opnform-project-form-zgxxfr/api
+      NUXT_PUBLIC_ENV:dev
+      NUXT_API_SECRET:2q7WZRFL2ppZjKV7u8PdD8btIyy0TVdQD8EWflCa
+
     networks:
       - dokploy-network
 
