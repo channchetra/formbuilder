@@ -11,8 +11,7 @@ services:
       DB_CONNECTION: ${DB_CONNECTION:-pgsql}
       FILESYSTEM_DISK: local
       LOCAL_FILESYSTEM_VISIBILITY: public
-    env_file: 
-      file: ./api/.env
+    env_file: ./api/.env
     volumes:
     - opnform_storage:/usr/share/nginx/html/storage:rw
 
